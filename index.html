@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sabahan Digital Solutions - Bantu bisnes kampung naik online, dari Google My Business, website, sampai social media setup." />
+  <meta name="description" content="Sabahan Digital Solutions - Bantu bisnes kampung naik online dengan solusi digital mesra dan profesional." />
   <meta name="keywords" content="Sabahan digital, bisnes online Sabah, Google My Business Sabah, website murah Sabah, social media marketing Sabah" />
   <meta name="author" content="Benny J Walter" />
   <title>Sabahan Digital Solutions</title>
@@ -14,7 +14,7 @@
       "@type": "LocalBusiness",
       "name": "Sabahan Digital Solutions",
       "image": "https://yourdomain.com/profile.jpg",
-      "telephone": "+601168577128",
+      "telephone": "+60123456789",
       "email": "benremind1@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -24,63 +24,133 @@
         "postalCode": "90000",
         "addressCountry": "MY"
       },
-      "url": "https://fallenben289.github.io/rural-servicev0.1/"
+      "url": "https://yourgithubpage.github.io"
     }
   </script>
   <style>
-    /* Base Styles */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #004d00, #ffffff); /* Dark green to white */
-      color: #333;
+    /* Reset */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    /* Background with green-emerald gradient */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #004d00, #50c878);
+      min-height: 100vh;
+      padding-top: 60px; /* Space for fixed navbar */
       display: flex;
       flex-direction: column;
       align-items: center;
+      color: #333;
     }
+    /* Top Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #004d00;
+      font-size: 1.1rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    /* Animated underline on hover */
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #004d00;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    nav a:hover {
+      color: #50c878;
+    }
+    /* Glassmorphism container style */
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    /* Container for the page content */
     .container {
       width: 90%;
       max-width: 1200px;
       margin: 20px auto;
-      padding: 20px;
       text-align: center;
     }
-    h1, h2 {
-      text-align: center;
+    /* Profile Section in Header */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .header-section {
+      flex: 1 1 300px;
+      margin: 10px;
+      padding: 20px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      backdrop-filter: blur(8px);
+    }
+    .header-section h2 {
+      margin-top: 0;
       color: #004d00;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-    }
-    p {
-      text-align: justify;
-      line-height: 1.6;
-      font-size: 1.1rem;
+    .profile-view {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
     .profile-img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      margin: 20px auto;
-      display: block;
       border: 3px solid #004d00;
+      margin-bottom: 10px;
     }
     /* Grid Cards */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 20px;
+      padding: 20px 0;
     }
     .card {
       background: rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
+      border-radius: 16px;
       padding: 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -103,38 +173,39 @@
     .cta-button:hover {
       background: #ffa500;
     }
-    /* Back-to-Top Button */
-    #backToTop {
-      display: none;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #ffd700;
-      color: #000;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.2rem;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-      transition: background 0.3s ease;
-    }
-    #backToTop:hover {
-      background: #ffa500;
-    }
-    /* Testimonial Section */
-    #testimonialSection {
+    /* Testimonial Submission Form */
+    #testimonials {
       margin: 40px auto;
       max-width: 800px;
-      background: rgba(0, 77, 0, 0.1);
-      padding: 20px;
-      border-radius: 10px;
     }
+    .testimonial-form input,
+    .testimonial-form textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .testimonial-form button {
+      background: #ffd700;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .testimonial-form button:hover {
+      background: #ffa500;
+    }
+    /* Testimonial Display Section */
     .testimonial {
       background: rgba(255,255,255,0.9);
       padding: 15px;
       margin: 10px 0;
-      border-radius: 10px;
+      border-radius: 16px;
       transition: transform 0.3s;
     }
     .testimonial:hover {
@@ -152,63 +223,91 @@
       .grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
-      h1 {
-        font-size: 2rem;
-      }
-      h2 {
-        font-size: 1.2rem;
+      .header-section {
+        flex: 1 1 100%;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Top Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Header Section with Profile -->
+  <header>
+    <div class="header-section" id="profile">
+      <h2>Profile</h2>
+      <div class="profile-view">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
+        <p><strong>Benny J Walter</strong></p>
+        <p>Digital Solutions Expert</p>
+      </div>
+    </div>
+  </header>
+  
   <div class="container">
-    <h1>Sabahan Digital Solutions 🌟</h1>
-    <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
-    <p>Hi, saya Benny J Walter! 👋 Saya sedia bantu bisnes kecil & vendor kampung naik online supaya lebih banyak orang boleh jumpa bisnes kamu! 🚀</p>
-    
+    <!-- Glassmorphism Content Section -->
+    <div class="glass">
+      <h1>Sabahan Digital Solutions 🌟</h1>
+      <p>Hi, saya Benny J Walter! 👋 Saya sedia bantu bisnes kecil & vendor kampung naik online supaya lebih banyak orang boleh jumpa bisnes kamu! 🚀</p>
+    </div>
+
+    <!-- Service Cards Grid -->
     <div class="grid">
-      <div class="card">
+      <div class="glass card">
         <h2>📍 Google My Business Setup</h2>
         <p>"Biar orang nampak bisnes kau di Google Maps! 🗺️ Setup RM 50–RM 100, lepas tu senang orang cari tempat kau."</p>
       </div>
-      <div class="card">
+      <div class="glass card">
         <h2>🌐 Simple Website Creation</h2>
         <p>"Kalau tiada website, susah juga orang percaya bisnes. 🖥️ Saya buat website simple tapi cun guna Google Sites (RM 300–RM 500) atau Wix (RM 500–RM 800)."</p>
       </div>
-      <div class="card">
+      <div class="glass card">
         <h2>📱 Social Media Setup</h2>
         <p>"Facebook, Instagram, WhatsApp Business semua penting. 📲 Saya tolong setup RM 50–RM 100 satu platform supaya bisnes kau lebih dikenali!"</p>
       </div>
-      <div class="card">
+      <div class="glass card">
         <h2>🔍 Basic SEO Optimization</h2>
         <p>"Biar bisnes kau naik ranking dalam carian Google. 📈 Saya optimize website & page bisnes kau untuk lebih mudah orang jumpa!"</p>
       </div>
-      <div class="card">
+      <div class="glass card">
         <h2>🛠️ Monthly Maintenance</h2>
         <p>"Kalau kau mau ada update tiap bulan, saya sedia urus RM 100–RM 200 per month. 💼 Boleh kasi cun lagi bisnes kau!"</p>
       </div>
     </div>
-    
-    <!-- Testimonial Section -->
-    <div id="testimonialSection">
-      <h2>Testimonials</h2>
+
+    <!-- Testimonial Submission Section (Located after Monthly Maintenance) -->
+    <div id="testimonials" class="glass">
+      <h2>Submit Your Testimonial</h2>
+      <form class="testimonial-form" onsubmit="submitTestimonial(event)">
+        <input type="text" id="testimonialName" placeholder="Your Name" required />
+        <textarea id="testimonialText" placeholder="Your Testimonial" rows="3" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
       <div id="testimonialContainer">
-        <!-- Testimonials will be injected here from testimonials.json -->
+        <!-- Testimonials will be loaded here dynamically -->
         <p>No testimonials yet. Check back soon!</p>
       </div>
     </div>
-    
-    <p>Jangan tunggu lagi! 🚀 Emel saya untuk <strong>free consultation</strong> sekarang!</p>
-    <button class="cta-button" onclick="window.location.href='mailto:benremind1@gmail.com'">Send Email</button>
-    <p>Phone/WhatsApp: <a href="https://wa.me/qr/R63JVJZ5ESB3A1" target="_blank" style="color: #ffd700; text-decoration: underline;">Chat on WhatsApp 📱</a> | Email: benremind1@gmail.com</p>
+
+    <!-- Closing Call-to-Action Section -->
+    <div class="glass">
+      <p>Jangan tunggu lagi! 🚀 Emel saya untuk <strong>free consultation</strong> sekarang!</p>
+      <button class="cta-button" onclick="window.location.href='mailto:benremind1@gmail.com'">Send Email</button>
+      <p>Phone/WhatsApp: <a href="https://wa.me/qr/R63JVJZ5ESB3A1" target="_blank" style="color: #ffd700; text-decoration: underline;">Chat on WhatsApp 📱</a> | Email: benremind1@gmail.com</p>
+    </div>
   </div>
-  
+
   <!-- Back-to-Top Button -->
   <button id="backToTop" title="Back to top">↑</button>
   
   <script>
-    // Back-to-Top Button
+    // Back-to-Top Button functionality
     const backToTopBtn = document.getElementById("backToTop");
     window.onscroll = function() {
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -220,11 +319,11 @@
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-    
-    // Load Testimonials from JSON File
+
+    // Load Testimonials from JSON file (hosted in your GitHub repository)
     async function loadTestimonials() {
       try {
-        const response = await fetch('testimonials.json'); // Ensure this file exists in your repository
+        const response = await fetch('testimonials.json'); // Ensure testimonials.json exists
         const testimonials = await response.json();
         const container = document.getElementById('testimonialContainer');
         if (testimonials.length === 0) {
@@ -233,7 +332,7 @@
           container.innerHTML = testimonials.map(item => `
             <div class="testimonial">
               <p>"${item.testimonial}"</p>
-              <p><strong>${item.name}</strong>, ${item.role} (${item.location})</p>
+              <p><strong>${item.name}</strong></p>
             </div>
           `).join('');
         }
@@ -242,8 +341,29 @@
         document.getElementById('testimonialContainer').innerHTML = "<p>Error loading testimonials.</p>";
       }
     }
-    
     loadTestimonials();
+
+    // Function to simulate testimonial submission (client-side demo)
+    function submitTestimonial(event) {
+      event.preventDefault();
+      const name = document.getElementById('testimonialName').value;
+      const testimonialText = document.getElementById('testimonialText').value;
+      const container = document.getElementById('testimonialContainer');
+      
+      const newTestimonial = document.createElement('div');
+      newTestimonial.classList.add('testimonial');
+      newTestimonial.innerHTML = `<p>"${testimonialText}"</p><p><strong>${name}</strong></p>`;
+      
+      // Remove "No testimonials yet" message if present
+      if (container.innerHTML.includes("No testimonials yet")) {
+        container.innerHTML = "";
+      }
+      container.appendChild(newTestimonial);
+      
+      // Clear form inputs
+      document.getElementById('testimonialName').value = "";
+      document.getElementById('testimonialText').value = "";
+    }
   </script>
 </body>
 </html>
