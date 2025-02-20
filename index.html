@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sabahan Digital Solutions - Bantu bisnes kampung naik online, dari Google My Business, website, sampai social media setup.">
-  <meta name="keywords" content="Sabahan digital, bisnes online Sabah, Google My Business Sabah, website murah Sabah, social media marketing Sabah">
-  <meta name="author" content="Benny J Walter">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sabahan Digital Solutions - Bantu bisnes kampung naik online, dari Google My Business, website, sampai social media setup." />
+  <meta name="keywords" content="Sabahan digital, bisnes online Sabah, Google My Business Sabah, website murah Sabah, social media marketing Sabah" />
+  <meta name="author" content="Benny J Walter" />
   <title>Sabahan Digital Solutions</title>
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
@@ -28,10 +28,11 @@
     }
   </script>
   <style>
+    /* Base Styles */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #228B22, #9ACD32);
-      color: #fff;
+      background: linear-gradient(to right, #004d00, #ffffff); /* Dark green to white */
+      color: #333;
       margin: 0;
       padding: 0;
       display: flex;
@@ -47,6 +48,7 @@
     }
     h1, h2 {
       text-align: center;
+      color: #004d00;
     }
     h1 {
       font-size: 2.5rem;
@@ -67,8 +69,9 @@
       border-radius: 50%;
       margin: 20px auto;
       display: block;
-      border: 3px solid #fff;
+      border: 3px solid #004d00;
     }
+    /* Grid Cards */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -76,7 +79,7 @@
       padding: 20px;
     }
     .card {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.8);
       border-radius: 10px;
       padding: 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -85,8 +88,9 @@
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     }
+    /* Call-to-Action Button */
     .cta-button {
-      background: #FFD700;
+      background: #ffd700;
       color: #000;
       padding: 15px 30px;
       border: none;
@@ -97,7 +101,7 @@
       margin-top: 20px;
     }
     .cta-button:hover {
-      background: #FFA500;
+      background: #ffa500;
     }
     /* Back-to-Top Button */
     #backToTop {
@@ -105,7 +109,7 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #FFD700;
+      background: #ffd700;
       color: #000;
       padding: 10px 15px;
       border: none;
@@ -116,27 +120,34 @@
       transition: background 0.3s ease;
     }
     #backToTop:hover {
-      background: #FFA500;
+      background: #ffa500;
     }
-    /* Testimonial Slider */
-    .slider {
-      position: relative;
+    /* Testimonial Section */
+    #testimonialSection {
       margin: 40px auto;
       max-width: 800px;
-      overflow: hidden;
+      background: rgba(0, 77, 0, 0.1);
+      padding: 20px;
       border-radius: 10px;
-      background: rgba(0,0,0,0.2);
-      padding: 20px;
     }
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
+    .testimonial {
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      transition: transform 0.3s;
     }
-    .slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      padding: 20px;
+    .testimonial:hover {
+      transform: scale(1.02);
     }
+    .testimonial p {
+      margin: 5px 0;
+      color: #004d00;
+    }
+    .testimonial strong {
+      color: #004d00;
+    }
+    /* Responsive */
     @media (max-width: 768px) {
       .grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -153,7 +164,7 @@
 <body>
   <div class="container">
     <h1>Sabahan Digital Solutions 🌟</h1>
-    <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+    <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
     <p>Hi, saya Benny J Walter! 👋 Saya sedia bantu bisnes kecil & vendor kampung naik online supaya lebih banyak orang boleh jumpa bisnes kamu! 🚀</p>
     
     <div class="grid">
@@ -179,24 +190,18 @@
       </div>
     </div>
     
-    <!-- Testimonial Slider -->
-    <div class="slider" id="testimonialSlider">
-      <div class="slides">
-        <div class="slide">
-          <p>"Layanan yang mesra dan mudah difahami. Terima kasih, Benny!" - Ali, Vendor</p>
-        </div>
-        <div class="slide">
-          <p>"Selepas setup, bisnes saya makin ramai pelanggan." - Siti, Pemilik Kedai</p>
-        </div>
-        <div class="slide">
-          <p>"Saya tak sangka online boleh jadi mudah dan efektif." - Ramli, Pengusaha Kampung</p>
-        </div>
+    <!-- Testimonial Section -->
+    <div id="testimonialSection">
+      <h2>Testimonials</h2>
+      <div id="testimonialContainer">
+        <!-- Testimonials will be injected here from testimonials.json -->
+        <p>No testimonials yet. Check back soon!</p>
       </div>
     </div>
     
     <p>Jangan tunggu lagi! 🚀 Emel saya untuk <strong>free consultation</strong> sekarang!</p>
     <button class="cta-button" onclick="window.location.href='mailto:benremind1@gmail.com'">Send Email</button>
-    <p>Phone/WhatsApp: <a href="https://wa.me/qr/R63JVJZ5ESB3A1" target="_blank" style="color: #FFD700; text-decoration: underline;">Chat on WhatsApp 📱</a> | Email: benremind1@gmail.com</p>
+    <p>Phone/WhatsApp: <a href="https://wa.me/qr/R63JVJZ5ESB3A1" target="_blank" style="color: #ffd700; text-decoration: underline;">Chat on WhatsApp 📱</a> | Email: benremind1@gmail.com</p>
   </div>
   
   <!-- Back-to-Top Button -->
@@ -216,15 +221,29 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
     
-    // Testimonial Slider
-    const slides = document.querySelector(".slides");
-    const totalSlides = document.querySelectorAll(".slide").length;
-    let slideIndex = 0;
-    function showNextSlide() {
-      slideIndex = (slideIndex + 1) % totalSlides;
-      slides.style.transform = "translateX(-" + (slideIndex * 100) + "%)";
+    // Load Testimonials from JSON File
+    async function loadTestimonials() {
+      try {
+        const response = await fetch('testimonials.json'); // Ensure this file exists in your repository
+        const testimonials = await response.json();
+        const container = document.getElementById('testimonialContainer');
+        if (testimonials.length === 0) {
+          container.innerHTML = "<p>No testimonials yet. Check back soon!</p>";
+        } else {
+          container.innerHTML = testimonials.map(item => `
+            <div class="testimonial">
+              <p>"${item.testimonial}"</p>
+              <p><strong>${item.name}</strong>, ${item.role} (${item.location})</p>
+            </div>
+          `).join('');
+        }
+      } catch (error) {
+        console.error('Error loading testimonials:', error);
+        document.getElementById('testimonialContainer').innerHTML = "<p>Error loading testimonials.</p>";
+      }
     }
-    setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+    
+    loadTestimonials();
   </script>
 </body>
 </html>
