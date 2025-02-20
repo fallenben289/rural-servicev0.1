@@ -24,6 +24,7 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
+            text-align: center;
         }
         .grid {
             display: grid;
@@ -47,50 +48,87 @@
             border-radius: 50%;
             margin: 20px auto;
             display: block;
+            border: 3px solid #fff;
         }
         h1, h2 {
             text-align: center;
         }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
         p {
             text-align: justify;
+            line-height: 1.6;
+        }
+        .cta-button {
+            background: #FFD700;
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background: #FFA500;
+        }
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 10px;
         }
         @media (max-width: 768px) {
             .grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sabahan Digital Solutions</h1>
+        <h1>Sabahan Digital Solutions 🌟</h1>
         <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-        <p>Hi, saya Benny J Walter! Saya sedia bantu bisnes kecil & vendor kampung naik online supaya lebih banyak orang boleh jumpa bisnes kamu!</p>
+        <p>Hi, saya Benny J Walter! 👋 Saya sedia bantu bisnes kecil & vendor kampung naik online supaya lebih banyak orang boleh jumpa bisnes kamu! 🚀</p>
         
         <div class="grid">
             <div class="card">
-                <h2>Google My Business Setup</h2>
-                <p>"Biar orang nampak bisnes kau di Google Maps! Setup RM 50–RM 100, lepas tu senang orang cari tempat kau."</p>
+                <h2>📍 Google My Business Setup</h2>
+                <p>"Biar orang nampak bisnes kau di Google Maps! 🗺️ Setup RM 50–RM 100, lepas tu senang orang cari tempat kau."</p>
             </div>
             <div class="card">
-                <h2>Simple Website Creation</h2>
-                <p>"Kalau tiada website, susah juga orang percaya bisnes. Saya buat website simple tapi cun guna Google Sites (RM 300–RM 500) atau Wix (RM 500–RM 800)."</p>
+                <h2>🌐 Simple Website Creation</h2>
+                <p>"Kalau tiada website, susah juga orang percaya bisnes. 🖥️ Saya buat website simple tapi cun guna Google Sites (RM 300–RM 500) atau Wix (RM 500–RM 800)."</p>
             </div>
             <div class="card">
-                <h2>Social Media Setup</h2>
-                <p>"Facebook, Instagram, WhatsApp Business semua penting. Saya tolong setup RM 50–RM 100 satu platform supaya bisnes kau lebih dikenali!"</p>
+                <h2>📱 Social Media Setup</h2>
+                <p>"Facebook, Instagram, WhatsApp Business semua penting. 📲 Saya tolong setup RM 50–RM 100 satu platform supaya bisnes kau lebih dikenali!"</p>
             </div>
             <div class="card">
-                <h2>Basic SEO Optimization</h2>
-                <p>"Biar bisnes kau naik ranking dalam carian Google. Saya optimize website & page bisnes kau untuk lebih mudah orang jumpa!"</p>
+                <h2>🔍 Basic SEO Optimization</h2>
+                <p>"Biar bisnes kau naik ranking dalam carian Google. 📈 Saya optimize website & page bisnes kau untuk lebih mudah orang jumpa!"</p>
             </div>
             <div class="card">
-                <h2>Monthly Maintenance</h2>
-                <p>"Kalau kau mau ada update tiap bulan, saya sedia urus RM 100–RM 200 per month. Boleh kasi cun lagi bisnes kau!"</p>
+                <h2>🛠️ Monthly Maintenance</h2>
+                <p>"Kalau kau mau ada update tiap bulan, saya sedia urus RM 100–RM 200 per month. 💼 Boleh kasi cun lagi bisnes kau!"</p>
             </div>
         </div>
         
-        <p>Hubungi saya untuk free consultation!</p>
+        <p>Jangan tunggu lagi! 🚀 Hubungi saya untuk <strong>free consultation</strong> sekarang! 📞</p>
+        <button class="cta-button" onclick="window.location.href='tel:[Insert Your Number]'">
+            <span class="emoji">📞</span> Hubungi Saya Sekarang!
+        </button>
         <p>Phone/WhatsApp: [Insert Your Number] | Email: [Insert Your Email]</p>
     </div>
 </body>
