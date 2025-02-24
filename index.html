@@ -27,6 +27,7 @@
       "url": "https://yourgithubpage.github.io"
     }
   </script>
+  <link rel="stylesheet" href="chat.css">
   <style>
     /* Reset */
 * {
@@ -208,48 +209,8 @@ header {
     flex: 1 1 100%;
   }
 }
-
-/*     Whatsapp */
-    /* Floating Chat Icon */
-        .chat-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
-
-        .chat-icon:hover {
-            background: #1ebe5c;
-        }
-
-      
-
-        /* Message Bubble */
-        .message {
-            background: #DCF8C6;
-            padding: 8px 12px;
-            border-radius: 15px;
-            max-width: 80%;
-            align-self: flex-start;
-        }
-
-        .sent {
-            background: #008069;
-            color: white;
-            align-self: flex-end;
-        }
   </style>
+  
 </head>
 <body>
   <!-- Top Navigation Bar -->
@@ -505,15 +466,15 @@ header {
     
     </div>
   </div>
-
-<div class="chat-container" style="position: fixed; bottom: 20px; left: 20px; width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); overflow: hidden; display: flex; flex-direction: column;">
-    <div class="chat-header" style="background: #0084ff; color: white; padding: 15px; text-align: center; font-weight: bold;">Chat with Us 💬</div>
-    <div class="chat-body" id="chatBody" style="height: 250px; overflow-y: auto; padding: 10px; display: flex; flex-direction: column;"></div>
-    <div class="chat-footer" style="display: flex; padding: 10px; background: #fff; border-top: 1px solid #ddd;">
-        <input type="text" id="chatInput" placeholder="Type a message..." style="flex: 1; padding: 10px; border: none; border-radius: 5px; outline: none; background: #f0f2f5;">
-        <button onclick="sendMessage()" style="background: #0084ff; color: white; border: none; padding: 10px 15px; margin-left: 5px; border-radius: 5px; cursor: pointer;">Send</button>
+ <!-- Chatbox UI -->
+    <div class="chat-container">
+        <div class="chat-header">Chat with Us 💬</div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
     </div>
-</div>
 
 
   
@@ -672,7 +633,6 @@ header {
       }
     }
 
-    // Whatsapp Chats
        function sendMessage() {
             const inputField = document.getElementById("chatInput");
             const message = inputField.value.trim();
@@ -689,8 +649,11 @@ header {
             // Scroll to latest message
             chatBody.scrollTop = chatBody.scrollHeight;
 
+            // Your WhatsApp Number (Change this!)
+            let phoneNumber = "60123456789"; // Replace with your number in international format
+
             // WhatsApp link with pre-filled message
-            let url = `https://wa.me/qr/R63JVJZ5ESB3A1?text=${encodeURIComponent(message)}`;
+            let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             
             // Open WhatsApp with pre-filled message
             setTimeout(() => {
@@ -699,6 +662,13 @@ header {
 
             // Clear input field
             inputField.value = "";
+        }
+
+        // Send message on Enter key press
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
         }
   </script>
 
