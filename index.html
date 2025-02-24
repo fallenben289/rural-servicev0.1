@@ -578,19 +578,10 @@ header {
     </div>
   </div>
 
-  <!-- Floating WhatsApp Chat Icon -->
-    <div class="chat-icon" onclick="toggleChatbox()">💬</div>
-
-    <!-- Chatbox -->
-    <div class="chatbox" id="chatbox">
-        <div class="chatbox-header">
-            WhatsApp Chat
-            <span class="close-btn" onclick="toggleChatbox()">✖</span>
-        </div>
-        <div class="chatbox-body" id="chatBody">
-            <!-- Messages will appear here -->
-        </div>
-        <div class="chatbox-footer">
+ <div class="chat-container">
+        <div class="chat-header">Chat with Us 💬</div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-footer">
             <input type="text" id="chatInput" placeholder="Type a message...">
             <button onclick="sendMessage()">Send</button>
         </div>
