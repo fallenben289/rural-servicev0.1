@@ -466,9 +466,15 @@ header {
     
     </div>
   </div>
- <!-- Chatbox UI -->
-    <div class="chat-container">
-        <div class="chat-header">Chat with Us 💬</div>
+ <!-- Chat Toggle Button -->
+    <button class="chat-button" onclick="toggleChat()">💬 Chat with Us</button>
+
+    <!-- Chatbox UI (Initially Hidden) -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            Chat with Us 💬
+            <button class="close-button" onclick="toggleChat()">✖</button>
+        </div>
         <div class="chat-body" id="chatBody"></div>
         <div class="chat-footer">
             <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
@@ -633,7 +639,13 @@ header {
       }
     }
 
-       function sendMessage() {
+           // Function to toggle chatbox visibility
+        function toggleChat() {
+            const chatContainer = document.getElementById("chatContainer");
+            chatContainer.style.display = chatContainer.style.display === "flex" ? "none" : "flex";
+        }
+
+        function sendMessage() {
             const inputField = document.getElementById("chatInput");
             const message = inputField.value.trim();
             const chatBody = document.getElementById("chatBody");
@@ -650,7 +662,7 @@ header {
             chatBody.scrollTop = chatBody.scrollHeight;
 
             // Your WhatsApp Number (Change this!)
-            let phoneNumber = "601168577128"; // Replace with your number in international format
+            let phoneNumber = "60123456789"; // Replace with your WhatsApp number in international format
 
             // WhatsApp link with pre-filled message
             let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
