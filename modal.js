@@ -23,26 +23,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Manual button to open modal
-  const openBtn = document.getElementById("openNewsletter");
-  if (openBtn) {
-    openBtn.addEventListener("click", function () {
-      modal.style.display = "flex";
-    });
-  }
-
-  // Close modal when clicking "×"
-  const closeBtn = document.querySelector(".close");
-  if (closeBtn) {
-    closeBtn.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-  }
-
-  // Close modal when clicking outside
-  window.onclick = function (event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("newsletterModal");
+    const closeBtn = document.querySelector(".close");
+    const openBtn = document.getElementById("openNewsletter");
+    
+    if (modal) {
+      // Auto-open modal after a short delay for a better user experience
+      setTimeout(() => {
+        modal.style.display = "flex";
+        modal.style.opacity = "1";
+      }, 1000); // Delay opening for 1 second
     }
-  };
-});
+
+    // Manual button to open modal
+    if (openBtn) {
+      openBtn.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modal.style.opacity = "1";
+      });
+    }
+
+    // Close modal when clicking "×"
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        closeModal();
+      });
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+
+    function closeModal() {
+      modal.style.opacity = "0";
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 300); // Matches the fade-out duration
+    }
+  });
