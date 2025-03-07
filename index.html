@@ -535,7 +535,7 @@ header {
   ↑
 </button>
 
-<!-- Newsletter Modal -->
+<!-- Newsletter Modal --><!-- Newsletter Modal -->
 <div id="newsletterModal" 
      style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
             max-width: 320px; background: white; padding: 15px; border-radius: 8px;
@@ -549,8 +549,12 @@ header {
 
   <h2 style="font-size: 16px; color: #333; margin: 0;">Subscribe to our Newsletter</h2>
 
-  <form style="display: flex; flex-direction: column; gap: 8px;">
-    <input type="email" placeholder="Enter your email" required 
+  <form id="newsletterForm" style="display: flex; flex-direction: column; gap: 8px;">
+    <input type="text" id="name" placeholder="Enter your name" required 
+           style="width: 100%; padding: 8px; border: 1px solid #ccc; 
+                  border-radius: 4px; font-size: 14px;">
+    
+    <input type="email" id="email" placeholder="Enter your email" required 
            style="width: 100%; padding: 8px; border: 1px solid #ccc; 
                   border-radius: 4px; font-size: 14px;">
 
@@ -560,6 +564,8 @@ header {
       Subscribe
     </button>
   </form>
+
+  <p id="message" style="color: green; font-size: 14px;"></p>
 </div>
 
 
