@@ -27,3 +27,23 @@
       }, 300); // Smooth fade-out effect
     }
   });
+
+// Name and Email:
+document.getElementById("newsletterForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    const response = await fetch("/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
+      },
+      body: JSON.stringify({ name, email })
+    });
+
+    const result = await response.json();
+    alert(result ? "Subscribed Successfully!" : "Failed to Subscribe!");
+  });
