@@ -29,21 +29,18 @@
   });
 
 // Name and Email:
-document.getElementById("newsletterForm").addEventListener("submit", async (e) => {
+ document.getElementById("newsletterForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
 
-    const response = await fetch("/subscribe", {
+    const response = await fetch("https://rural-servicev0-1.onrender.com/subscribe", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email })
     });
 
     const result = await response.json();
-    alert(result ? "Subscribed Successfully!" : "Failed to Subscribe!");
+    alert(result.message);
   });
