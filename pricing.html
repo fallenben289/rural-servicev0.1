@@ -1,139 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Table</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #FF8C00, #FF4500, #000000);
-            color: white; /* Ensure text is readable on the gradient */
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-        }
-        h2, h3 {
-            font-family: 'Georgia', serif;
-            color: white;
-        }
-        table {
-            width: 90%;
-            max-width: 600px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.95); /* Slightly less transparent for better contrast */
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border around the table */
-        }
-        th, td {
-            padding: 12px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border between rows */
-            border-right: 1px solid rgba(0, 0, 0, 0.05); /* Optional: Light vertical borders */
-            color: #333; /* Explicitly set text color for better contrast */
-        }
-        th {
-            background: linear-gradient(135deg, #FF8C00, #FF4500);
-            color: white;
-            border-right: none; /* Remove vertical borders from header */
-        }
-        tr:nth-child(even) {
-            background: #f8f8f8;
-        }
-        tr:nth-child(odd) {
-            background: #fff;
-        }
-        a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 12px 20px;
-            font-size: 18px;
-            color: white;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            border-radius: 8px;
-            text-decoration: none;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        a:hover {
-            background: linear-gradient(135deg, #128C7E, #25D366);
-        }
-        p {
-            margin-top: 20px;
-            font-size: 16px;
-            color: white;
-        }
-    </style>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; background: linear-gradient(135deg, #FF8C00, #FF4500, #000000); color: white; text-align: center; padding: 20px; margin: 0; position: relative;">
 
-    <h2>💰 Pricing Table (Easier to Explain to Customers)</h2>
+    <!-- Main Heading -->
+    <h2 style="font-family: Georgia, serif; color: white; margin-bottom: 20px; font-size: 28px;">💰 Harga Servis (Murah & Senang)</h2>
 
     <!-- Main Services Table -->
-    <table>
+    <table style="width: 90%; max-width: 800px; margin: 20px auto; border-collapse: collapse; background: rgba(255, 255, 255, 0.98); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border-radius: 10px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.1);">
         <thead>
             <tr>
-                <th>Service</th>
-                <th>Price</th>
-                <th>What You Get</th>
+                <th style="padding: 15px; border-bottom: 2px solid rgba(0, 0, 0, 0.2); background: linear-gradient(135deg, #FF8C00, #FF4500); color: black; font-size: 18px; font-weight: bold;">Servis</th>
+                <th style="padding: 15px; border-bottom: 2px solid rgba(0, 0, 0, 0.2); background: linear-gradient(135deg, #FF8C00, #FF4500); color: black; font-size: 18px; font-weight: bold;">Harga</th>
+                <th style="padding: 15px; border-bottom: 2px solid rgba(0, 0, 0, 0.2); background: linear-gradient(135deg, #FF8C00, #FF4500); color: black; font-size: 18px; font-weight: bold;">Manfaat</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>📌 Digital Business Card</td>
-                <td>RM10/month</td>
-                <td>Simple online page with business name, contact info & WhatsApp button.</td>
+            <tr style="background: #fff;">
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">📌 Kad Bisnes Digital</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">RM10/bulan</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">Page online mudah dengan nama bisnes, nombor fon & butang WhatsApp.</td>
             </tr>
-            <tr>
-                <td>🌐 Basic Landing Page</td>
-                <td>RM20/month</td>
-                <td>1-page website with your logo, business details & customer inquiry form.</td>
+            <tr style="background: #f8f8f8;">
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">🌐 Landing Page</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">RM20/bulan</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">Website 1 halaman dengan logo, info bisnes & borang pelanggan.</td>
             </tr>
-            <tr>
-                <td>🏡 Full Website (3-5 pages)</td>
-                <td>RM100 setup + RM50/month</td>
-                <td>Complete website with homepage, services, contact page & updates.</td>
+            <tr style="background: #fff;">
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">🏡 Website Lengkap (3-5 Halaman)</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">RM100 setup + RM50/bulan</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">Website lengkap dengan homepage, servis, & borang pertanyaan.</td>
             </tr>
         </tbody>
     </table>
 
-    <h3>🔥 Add-ons (Optional)</h3>
+    <!-- Add-ons Heading -->
+    <h3 style="font-family: Georgia, serif; color: white; margin-bottom: 20px; font-size: 24px;">🔥 Add-ons (Pilihan Tambahan)</h3>
 
     <!-- Add-ons Table -->
-    <table>
+    <table style="width: 90%; max-width: 800px; margin: 20px auto; border-collapse: collapse; background: rgba(255, 255, 255, 0.98); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border-radius: 10px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.1);">
         <thead>
             <tr>
-                <th>Service</th>
-                <th>Price</th>
-                <th>Details</th>
+                <th style="padding: 15px; border-bottom: 2px solid rgba(0, 0, 0, 0.2); background: linear-gradient(135deg, #FF8C00, #FF4500); color: black; font-size: 18px; font-weight: bold;">Servis</th>
+                <th style="padding: 15px; border-bottom: 2px solid rgba(0, 0, 0, 0.2); background: linear-gradient(135deg, #FF8C00, #FF4500); color: black; font-size: 18px; font-weight: bold;">Harga</th>
+                <th style="padding: 15px; border-bottom: 2px solid rgba(0, 0, 0, 0.2); background: linear-gradient(135deg, #FF8C00, #FF4500); color: black; font-size: 18px; font-weight: bold;">Butiran</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>📢 Facebook Promotion</td>
-                <td>RM30</td>
-                <td>I will promote your business in Facebook groups.</td>
+            <tr style="background: #fff;">
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">📢 Promosi Facebook</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">RM30</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">Promosi bisnes kamu dalam group Facebook.</td>
             </tr>
-            <tr>
-                <td>📝 Monthly Updates</td>
-                <td>RM10</td>
-                <td>Need changes? I will update your page every month.</td>
+            <tr style="background: #f8f8f8;">
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">📝 Kemaskini Bulanan</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">RM10</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">Perlu ubah suai website? Saya update setiap bulan.</td>
             </tr>
-            <tr>
-                <td>🎨 Custom Design</td>
-                <td>RM50</td>
-                <td>A unique design that matches your branding.</td>
+            <tr style="background: #fff;">
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">🎨 Design Custom</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">RM50</td>
+                <td style="padding: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.2); color: black; font-size: 16px;">Design khas ikut branding kamu.</td>
             </tr>
         </tbody>
     </table>
 
-    <p>
-        🏆 <strong>Special Offer:</strong> First 5 businesses get RM5 off!  
+    <!-- Promo Section -->
+    <p style="margin-top: 20px; font-size: 18px; color: white; font-weight: bold; background: rgba(0, 0, 0, 0.8); padding: 15px; border-radius: 8px; max-width: 600px; margin: 20px auto;">
+        🏆 <strong>Promo:</strong> 5 bisnes pertama dapat diskaun RM5!
     </p>
 
-    <a href="https://wa.me/yourwhatsappnumber">
-       📩 Contact Me on WhatsApp
+    <!-- Why Not DIY Section -->
+    <h3 style="font-family: Georgia, serif; color: white; margin-bottom: 20px; font-size: 24px; background: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 8px; display: inline-block;">
+        ❗ Kenapa Buat Sendiri Bukan Idea Bagus?
+    </h3>
+    <div style="text-align: left; max-width: 600px; margin: 20px auto; font-size: 16px; background: rgba(255, 255, 255, 0.98); padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                <span style="position: absolute; left: 0; color: #FF8C00; font-size: 20px;">⏳</span>
+                <p style="color: black; margin: 0;"><strong>Buat website sendiri makan masa</strong> – Daripada belajar coding, baik fokus pada bisnes anda.</p>
+            </li>
+            <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                <span style="position: absolute; left: 0; color: #FF8C00; font-size: 20px;">😩</span>
+                <p style="color: black; margin: 0;"><strong>Boleh jadi pening</strong> – Susah kalau tidak biasa dengan domain, hosting, dan design.</p>
+            </li>
+            <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                <span style="position: absolute; left: 0; color: #FF8C00; font-size: 20px;">💸</span>
+                <p style="color: black; margin: 0;"><strong>Silap langkah, rugi duit</strong> – Beli domain & hosting tapi website tidak siap? Rugi!</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Call-to-Action Section -->
+    <p style="font-size: 20px; color: white; background: rgba(0, 0, 0, 0.9); padding: 15px; border-radius: 8px; max-width: 600px; margin: 20px auto; font-weight: bold;">
+        📲 <strong>Senang jak!</strong> WhatsApp saya, website siap dalam <strong>1-2 hari</strong>. 🚀
+    </p>
+
+    <!-- Back Button -->
+    <a href="index.html" style="display: inline-block; position: fixed; bottom: 20px; right: 20px; padding: 12px 20px; font-size: 18px; color: white; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 8px; text-decoration: none; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+        ← Balik ke Laman Utama
     </a>
 
 </body>
