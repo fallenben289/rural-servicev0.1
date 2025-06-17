@@ -414,115 +414,46 @@
 
     /* Slider */
     /* Poster Slider Section */
-    .poster-section {
-      margin: 3rem auto;
-      max-width: 1200px;
-      padding: 1rem;
-    }
+     .poster-section {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: #f5f5f5;
+  }
 
-    .poster-slider-container {
-      position: relative;
-      width: 100%;
-      margin: 2rem auto;
-      overflow: hidden;
-      border-radius: var(--border-radius);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+  .poster-slider-container {
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+  }
 
-    .poster-slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
-      height: 300px; /* Initial height for mobile */
-    }
+  .poster-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
 
-    .poster-slide {
-      min-width: 100%;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-    }
+  .poster-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
 
+  .poster-content {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Optional: Responsive */
+  @media (max-width: 768px) {
     .poster-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: white;
+      height: 300px;
     }
-
-    .poster-content.a4 {
-      /* A4 aspect ratio (1:1.414) */
-      padding-top: 141.4%;
-    }
-
-    .poster-content.wide {
-      /* 16:4 aspect ratio (4:1) */
-      padding-top: 25%;
-    }
-
-    .slider-controls {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .slider-btn {
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .slider-btn:hover {
-      background: var(--highlight);
-      color: var(--dark);
-    }
-
-    .aspect-toggle {
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-
-    .aspect-btn {
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--light);
-      border: 2px solid var(--accent);
-      padding: 0.5rem 1rem;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      transition: var(--transition);
-      margin: 0 0.5rem;
-    }
-
-    .aspect-btn.active {
-      background: var(--accent);
-      color: white;
-    }
-
-    @media (min-width: 768px) {
-      .poster-slider {
-        height: 400px; /* Larger height for tablets */
-      }
-    }
-
-    @media (min-width: 992px) {
-      .poster-slider {
-        height: 500px; /* Even larger for desktops */
-      }
-    }
+  }
   </style>
 </head>
 <body>
@@ -549,14 +480,15 @@
   <main class="container">
     <h1>Sabahan Digital Solutions for Local Businesses</h1>
     
-    <section class="poster-section">
+<section class="poster-section">
       <div class="poster-slider-container">
         <div class="poster-slider" id="posterSlider">
           <div class="poster-slide">
-            <div class="poster-content a4" style="background-image: url('slide.png')"></div>
+            <div class="poster-content" style="background-image: url('slide.png');"></div>
           </div>
         </div>
       </div>
+    </section>
 
     <section id="services">
       <h2 class="section-title">Grow Your Business Online in Sabah</h2>
